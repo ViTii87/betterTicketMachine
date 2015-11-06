@@ -106,9 +106,14 @@ public class TicketMachine
     public int emptyMachine()
     {
         int granTotal;
-        granTotal = total;
-        total = 0;
-        return granTotal;
+        if (balance == 0) {
+            granTotal = total;
+            total = 0;
+            return granTotal;
+        }
+        else {
+            return -1;
+        }
     }    
     
     /**
