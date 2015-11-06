@@ -51,7 +51,7 @@ public class TicketMachine
      */
     public void insertMoney(int amount)
     {
-        if(amount > 0) {
+        if (amount > 0) {
             balance = balance + amount;
         }
         else {
@@ -99,4 +99,15 @@ public class TicketMachine
         balance = 0;
         return amountToRefund;
     }
+    
+    /**
+     * Metodo que vacia la maquina y devuelve todo lo introducido en ella
+     */
+    public int emptyMachine()
+    {
+        int granTotal;
+        granTotal = total;
+        total = 0;
+        return granTotal;
+    }    
 }
