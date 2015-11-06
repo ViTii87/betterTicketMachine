@@ -83,7 +83,7 @@ public class TicketMachine
         }
         else {
             System.out.println("You must insert at least: " +
-                               (price - balance) + " more cents.");
+                               amountLeftToPay() + " more cents.");
                     
         }
     }
@@ -110,4 +110,14 @@ public class TicketMachine
         total = 0;
         return granTotal;
     }    
+    
+    /**
+     * Metodo para devolver lo que te faltaria para comprar un ticket
+     */
+    public int amountLeftToPay()
+    {
+        int leftToPay;
+        leftToPay = price - balance;
+        return leftToPay;
+    }
 }
