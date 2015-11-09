@@ -94,6 +94,17 @@ public class TicketMachine
     }
 
     /**
+     * Metodo para avisar al usuario que va a comprar tickets sin 
+     * descuento.
+     */
+    public void printTicketWithDiscount()
+    {
+        if(isDiscount == false) {
+            System.out.println("El ticket se imprimira sin descuento");
+        }
+    }
+    
+    /**
      * Return the money in the balance.
      * The balance is cleared.
      */
