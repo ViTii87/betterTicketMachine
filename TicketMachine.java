@@ -17,15 +17,19 @@ public class TicketMachine
     private int balance;
     // The total amount of money collected by this machine.
     private int total;
+    //
+    private boolean isDiscount;
 
     /**
-     * Create a machine that issues tickets of the given price.
+     * Creamos una TicketMachine a la que le pasamos por parametro el
+     * coste del ticket y si tiene un descuento
      */
-    public TicketMachine(int cost)
+    public TicketMachine(int cost, boolean discount)
     {
         price = cost;
         balance = 0;
         total = 0;
+        isDiscount = discount;
     }
 
     /**
